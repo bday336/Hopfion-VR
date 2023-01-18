@@ -20,4 +20,4 @@ Currently the field being visualized by the arrows and particle trails must be h
 The default simulation scene have the vector field represented by a cube with side length of 2 units and arrow resolution of 20 per dimension. This gives a dense field of vector arrows, but its can be changed in the Unity inspector through the field object by adjusting the grid resolution value (you may have to pause the scene, change the value, then restart the scene)
 
 Controls:<br><br>
-![alt text](https://raw.githubusercontent.com/OthmanAlrawi/Visualizing-Vector-Fields/main/Controls%20Manual.png)
+![alt text](https://raw.githubusercontent.com/bday336/Hopfion-VR/main/Controls%20Manual.png)
