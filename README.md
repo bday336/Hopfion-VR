@@ -21,3 +21,16 @@ The default simulation scene have the vector field represented by a cube with si
 
 Controls:<br><br>
 ![alt text](https://raw.githubusercontent.com/bday336/Hopfion-VR/main/Controls%20Manual.png)
+
+For Left Controller:
+Button 1 - Currently not assigned
+Button 2 - Place object held in hand at current position in the scene
+Button 3 - Change object held by controller (currently switches between test particle and nothing, i.e. empty hand)
+Button 4 - Activate and deactivate the flow of test particles
+
+Right Controller:
+Button 1 - Teleport user to the position of the teleport pointer (if teleport function is active)
+Button 2 - Grab object placed in scene
+Button 3 - Reset the scene (delete all the test particles present)
+Button 4 - Activate and deactivate the teleport function for the user
+
