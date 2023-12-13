@@ -38,6 +38,10 @@ public class RightControllerScript : MonoBehaviour
         objectInHand = placables[index];
         model = Instantiate(objectInHand, transform.position + 0.2f * transform.forward, Quaternion.identity, gameObject.transform);
         model.GetComponent<Collider>().enabled = false;
+        if (objectInHand == testParticle)
+        {
+            model.GetComponent<TrailRenderer>().time = 0;
+        }
 
     }
     void Update()
@@ -80,6 +84,10 @@ public class RightControllerScript : MonoBehaviour
         model = Instantiate(objectInHand, placementPosition, gameObject.transform.rotation, gameObject.transform);
         model.transform.localRotation = objectInHand.transform.rotation;
         model.GetComponent<Collider>().enabled = false;
+        if (objectInHand == testParticle)
+        {
+            model.GetComponent<TrailRenderer>().time = 0;
+        }
     }
 
     // Method to spawn the held object in the scene
@@ -87,6 +95,10 @@ public class RightControllerScript : MonoBehaviour
     {
         GameObject temp = Instantiate(model, placementPosition, model.transform.rotation);
         temp.GetComponent<Collider>().enabled = false;
+        if (objectInHand == testParticle)
+        {
+            temp.GetComponent<TrailRenderer>().time = 50;
+        }
 
     }
 

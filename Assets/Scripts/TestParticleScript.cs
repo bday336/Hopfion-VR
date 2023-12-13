@@ -9,6 +9,7 @@ public class TestParticleScript : MonoBehaviour
     public float surviveDistance;                   // Distance from origin at which the test particle is destoryed
     public static bool flowToggle = false;          // Check to determine if the particle is flowing with vector field
 
+
     // Placeholder variables to simplify the field expressions
     public float px;
     public float py;
@@ -21,6 +22,8 @@ public class TestParticleScript : MonoBehaviour
     {
         // Make sure it has rigid body component for physics
         rigidBody = GetComponent<Rigidbody>();
+        // rigidBody.GetComponent<TrailRenderer>().time = 0;
+
 
     }
 
@@ -37,6 +40,9 @@ public class TestParticleScript : MonoBehaviour
         // Particle only flows when the toggle is flagged to flow
         if (flowToggle)
         {
+            // Activate Trial
+            // rigidBody.GetComponent<TrailRenderer>().time = 50;
+
             // Physical position
             Vector3 pos = rigidBody.transform.position;
 
