@@ -225,7 +225,7 @@
             {
                "inputs" : {
                   "click" : {
-                     "output" : "/actions/default/in/teleport"
+                     "output" : "/actions/default/in/resetballs"
                   }
                },
                "mode" : "trackpad",
