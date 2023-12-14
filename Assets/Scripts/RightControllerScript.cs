@@ -10,6 +10,8 @@ public class RightControllerScript : MonoBehaviour
     public SteamVR_Action_Boolean grabAction;
     public SteamVR_Action_Boolean toggle;
     public SteamVR_Action_Boolean toggleFlow;
+    public SteamVR_Action_Boolean resetBalls;
+
 
     // Object currently in hand to be placed in scene
     private GameObject objectInHand;
@@ -60,6 +62,7 @@ public class RightControllerScript : MonoBehaviour
         if (toggleFlow.GetLastStateDown(handType))
         {
             TestParticleScript.ToggleFlow();
+            // Reset();
         }
 
         // Side grip button input to change between placeable objects
@@ -72,6 +75,12 @@ public class RightControllerScript : MonoBehaviour
             }
             SetModel(index, placables);
 
+        }
+
+        // Press Touchpad to reset the scene (remove all the balls)
+        if (resetBalls.GetLastStateDown(handType))
+        {
+            Reset();
         }
        
     }
@@ -98,6 +107,23 @@ public class RightControllerScript : MonoBehaviour
         if (objectInHand == testParticle)
         {
             temp.GetComponent<TrailRenderer>().time = 50;
+        }
+
+    }
+
+     // Method to reset the scene by destroying of the objects in scene
+    private void Reset()
+    {
+        Debug.Log("Reset!!!");
+        GameObject[] AllTestParticles = GameObject.FindGameObjectsWithTag("Test Particle");
+        Debug.Log(AllTestParticles);
+
+        for (int i = 0; i < AllTestParticles.Length; i++) {
+            if (!AllTestParticles[i].Equals(model))
+            {
+                ExplosionEffect(AllTestParticles[i]);
+                Destroy(AllTestParticles[i]);
+            }
         }
 
     }
