@@ -47,6 +47,8 @@ namespace Valve.VR
         
         private static SteamVR_Action_Boolean p_default_teleportActivation;
         
+        private static SteamVR_Action_Boolean p_default_resetBalls;
+        
         private static SteamVR_Action_Vibration p_default_Haptic;
         
         private static SteamVR_Action_Vector2 p_platformer_Move;
@@ -183,6 +185,14 @@ namespace Valve.VR
             }
         }
         
+        public static SteamVR_Action_Boolean default_resetBalls
+        {
+            get
+            {
+                return SteamVR_Actions.p_default_resetBalls.GetCopy<SteamVR_Action_Boolean>();
+            }
+        }
+        
         public static SteamVR_Action_Vibration default_Haptic
         {
             get
@@ -265,6 +275,7 @@ namespace Valve.VR
                     SteamVR_Actions.default_togglePotential,
                     SteamVR_Actions.default_toggleFlow,
                     SteamVR_Actions.default_teleportActivation,
+                    SteamVR_Actions.default_resetBalls,
                     SteamVR_Actions.default_Haptic,
                     SteamVR_Actions.platformer_Move,
                     SteamVR_Actions.platformer_Jump,
@@ -289,6 +300,7 @@ namespace Valve.VR
                     SteamVR_Actions.default_togglePotential,
                     SteamVR_Actions.default_toggleFlow,
                     SteamVR_Actions.default_teleportActivation,
+                    SteamVR_Actions.default_resetBalls,
                     SteamVR_Actions.platformer_Move,
                     SteamVR_Actions.platformer_Jump,
                     SteamVR_Actions.buggy_Steering,
@@ -315,6 +327,7 @@ namespace Valve.VR
                     SteamVR_Actions.default_togglePotential,
                     SteamVR_Actions.default_toggleFlow,
                     SteamVR_Actions.default_teleportActivation,
+                    SteamVR_Actions.default_resetBalls,
                     SteamVR_Actions.platformer_Jump,
                     SteamVR_Actions.buggy_Brake,
                     SteamVR_Actions.buggy_Reset};
@@ -341,6 +354,7 @@ namespace Valve.VR
                     SteamVR_Actions.default_togglePotential,
                     SteamVR_Actions.default_toggleFlow,
                     SteamVR_Actions.default_teleportActivation,
+                    SteamVR_Actions.default_resetBalls,
                     SteamVR_Actions.platformer_Move,
                     SteamVR_Actions.platformer_Jump,
                     SteamVR_Actions.buggy_Steering,
@@ -366,6 +380,7 @@ namespace Valve.VR
             SteamVR_Actions.p_default_togglePotential = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/default/in/togglePotential")));
             SteamVR_Actions.p_default_toggleFlow = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/default/in/toggleFlow")));
             SteamVR_Actions.p_default_teleportActivation = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/default/in/teleportActivation")));
+            SteamVR_Actions.p_default_resetBalls = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/default/in/resetBalls")));
             SteamVR_Actions.p_default_Haptic = ((SteamVR_Action_Vibration)(SteamVR_Action.Create<SteamVR_Action_Vibration>("/actions/default/out/Haptic")));
             SteamVR_Actions.p_platformer_Move = ((SteamVR_Action_Vector2)(SteamVR_Action.Create<SteamVR_Action_Vector2>("/actions/platformer/in/Move")));
             SteamVR_Actions.p_platformer_Jump = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/platformer/in/Jump")));

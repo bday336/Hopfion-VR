@@ -137,6 +137,14 @@ namespace Valve.VR
             }
         }
         
+        public virtual SteamVR_Action_Boolean resetBalls
+        {
+            get
+            {
+                return SteamVR_Actions.default_resetBalls;
+            }
+        }
+        
         public virtual SteamVR_Action_Vibration Haptic
         {
             get
