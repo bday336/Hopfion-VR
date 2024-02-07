@@ -2,6 +2,9 @@
 
 This will be made into a final build, but the source code is here.
 
+User view of Hopfion field with sample tracer particle trajectory:<br><br>
+![alt text](https://raw.githubusercontent.com/bday336/Hopfion-VR/main/hopfion_image.png)
+
 ___________________________________
 Make local version in Unity
 ___________________________________
